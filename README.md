@@ -36,9 +36,13 @@ The architecture is a custom deep CNN with 5 convolutional layers followed by ba
 
 ---
 
-## Requirements
+## Installation
 
-Use the `requirements.txt` file to install dependencies:
+#### 1. Clone the repository
+        git clone https://github.com/yourusername/emotion-detector.git
+        cd emotion-detector
 
-```bash
-pip install -r requirements.txt
+#### 3. Install required packages
+        pip install -r requirements.txt
+
+ 
