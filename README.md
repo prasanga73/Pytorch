@@ -2,23 +2,9 @@
 
 This repository contains a PyTorch-based Convolutional Neural Network (CNN) model built to detect emotions from facial expressions using the **FER-2013** dataset.
 
----
 ## Project Structure 
 
-emotion-detector/
-├── CustomDataset/
-│   ├── train/                    # Training images by class
-│   └── test/                     # Test images by class
-├── models/
-│   └── modeldrop4.pth            # Trained PyTorch model (not committed to Git)
-├── helper_functions.py           # Utility functions for training/evaluation
-├── ImageClassifier.py            # CNN model architecture
-├── trainNN.py                    # Training script
-├── live.py                       # Real-time webcam emotion detection
-├── live.ipynb                    # Jupyter version of live detection
-├── main.ipynb                    # Notebook for model experimentation
-├── requirements.txt              # Python package dependencies
-└── .gitignore                    # Files and folders ignored by Git
+<pre> emotion-detector/ │ ├── CustomDataset/ │ ├── train/ # Training images organized by emotion labels │ └── test/ # Test images organized by emotion labels │ ├── models/ │ └── modeldrop4.pth # Trained PyTorch model (not committed to Git) │ ├── helper_functions.py # Utility functions for preprocessing, evaluation, etc. ├── ImageClassifier.py # Contains the CustomCNN model architecture ├── trainNN.py # Script to train the CNN on FER-2013 dataset ├── live.py # Live emotion detection using webcam and OpenCV ├── live.ipynb # Jupyter notebook version of live detection ├── main.ipynb # Notebook for model training/visualization/testing ├── requirements.txt # Python package dependencies ├── README.md # Project documentation └── .gitignore # Files and folders ignored by Git </pre>
 
 
 ## 🚀 Project Overview
@@ -62,21 +48,23 @@ Conv2d → BatchNorm → ReLU → MaxPool
    ↓  
 Flatten → Dense (256) → Dropout → Dense (512) → Dense (7)
 
----
+```
 
 ## Dataset
 
 [FER-2013](https://www.kaggle.com/datasets/msambare/fer2013) is a publicly available dataset with 35,887 grayscale 48x48 pixel facial images labeled with 7 emotion categories.
 
----
-
 ## Installation
 
 #### 1. Clone the repository
-        git clone https://github.com/yourusername/emotion-detector.git
-        cd emotion-detector
+        git clone https://github.com/prasanga73/Pytorch.git
+        cd "Emotion Detector"
 
 #### 3. Install required packages
         pip install -r requirements.txt
 
 ## Run the file
+   conda activate (environment_name)
+   python live.py 
+   or
+   streamlit run ImageClassifier.py
