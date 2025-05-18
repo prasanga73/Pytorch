@@ -3,8 +3,25 @@
 This repository contains a PyTorch-based Convolutional Neural Network (CNN) model built to detect emotions from facial expressions using the **FER-2013** dataset.
 
 ---
+## Project Structure 
 
-## Project Overview
+emotion-detector/
+├── CustomDataset/
+│   ├── train/                    # Training images by class
+│   └── test/                     # Test images by class
+├── models/
+│   └── modeldrop4.pth            # Trained PyTorch model (not committed to Git)
+├── helper_functions.py           # Utility functions for training/evaluation
+├── ImageClassifier.py            # CNN model architecture
+├── trainNN.py                    # Training script
+├── live.py                       # Real-time webcam emotion detection
+├── live.ipynb                    # Jupyter version of live detection
+├── main.ipynb                    # Notebook for model experimentation
+├── requirements.txt              # Python package dependencies
+└── .gitignore                    # Files and folders ignored by Git
+
+
+## 🚀 Project Overview
 
 The model classifies facial images into **7 emotion classes**:
 - Angry
@@ -28,6 +45,23 @@ The architecture is a custom deep CNN with 5 convolutional layers followed by ba
 - Fully connected layers: 256 → 512 → 7 (output classes)
 - Dropout layer to reduce overfitting
 
+## 🧠 Model Architecture Diagrammatically
+
+The model is a custom 5-layer convolutional neural network with Batch Normalization and Dropout:
+
+```python
+Conv2d → BatchNorm → ReLU → MaxPool  
+   ↓  
+Conv2d → BatchNorm → ReLU → MaxPool  
+   ↓  
+Conv2d → BatchNorm → ReLU  
+   ↓  
+Conv2d → BatchNorm → ReLU → MaxPool  
+   ↓  
+Conv2d → BatchNorm → ReLU → MaxPool  
+   ↓  
+Flatten → Dense (256) → Dropout → Dense (512) → Dense (7)
+
 ---
 
 ## Dataset
@@ -45,4 +79,4 @@ The architecture is a custom deep CNN with 5 convolutional layers followed by ba
 #### 3. Install required packages
         pip install -r requirements.txt
 
- 
+## Run the file
