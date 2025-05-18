@@ -64,7 +64,7 @@ Flatten → Dense (256) → Dropout → Dense (512) → Dense (7)
         pip install -r requirements.txt
 
 ## Run the file
-   conda activate (environment_name)
-   python live.py 
-   or
-   streamlit run ImageClassifier.py
+      conda activate (environment_name)
+      python live.py 
+      or
+      streamlit run ImageClassifier.py
