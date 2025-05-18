@@ -4,7 +4,21 @@ This repository contains a PyTorch-based Convolutional Neural Network (CNN) mode
 
 ## Project Structure 
 
-<pre> emotion-detector/ │ ├── CustomDataset/ │ ├── train/ # Training images organized by emotion labels │ └── test/ # Test images organized by emotion labels │ ├── models/ │ └── modeldrop4.pth # Trained PyTorch model (not committed to Git) │ ├── helper_functions.py # Utility functions for preprocessing, evaluation, etc. ├── ImageClassifier.py # Contains the CustomCNN model architecture ├── trainNN.py # Script to train the CNN on FER-2013 dataset ├── live.py # Live emotion detection using webcam and OpenCV ├── live.ipynb # Jupyter notebook version of live detection ├── main.ipynb # Notebook for model training/visualization/testing ├── requirements.txt # Python package dependencies ├── README.md # Project documentation └── .gitignore # Files and folders ignored by Git </pre>
+      emotion-detector/
+      ├── CustomDataset/
+      │   ├── train/
+      │   └── test/
+      ├── models/
+      │   └── modeldrop4.pth
+      ├── helper_functions.py
+      ├── ImageClassifier.py
+      ├── trainNN.py
+      ├── live.py
+      ├── live.ipynb
+      ├── main.ipynb
+      ├── requirements.txt
+      └── .gitignore
+
 
 
 ## 🚀 Project Overview
